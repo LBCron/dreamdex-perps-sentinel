@@ -1,0 +1,41 @@
+{
+  "name": "dreamdex-perps-sentinel",
+  "version": "1.0.0",
+  "description": "dreamDEX Perps Sentinel — Automated Funding-Rate Arbitrage, Liquidation Guard & Risk-Managed Execution Agent on Somnia Testnet (Chain 50383)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "dreamdex-sentinel": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "demo": "tsx src/cli.ts",
+    "audit": "tsx scripts/reproduce-bugs.ts",
+    "test:python": "python3 -m unittest discover -s python/tests -v"
+  },
+  "keywords": [
+    "somnia",
+    "dreamdex",
+    "perpetuals",
+    "funding-arbitrage",
+    "liquidation-guard",
+    "defi",
+    "chain-50383",
+    "hideki"
+  ],
+  "author": "LBCron <ronanchenlopes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@somnia-chain/markets-sdk": "^0.32.1",
+    "dotenv": "^16.4.5",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
